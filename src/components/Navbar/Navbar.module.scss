@@ -1,0 +1,14 @@
+.Navbar {
+    display: flex;
+    flex-direction: row;
+    align-items: left;
+    background-color: red;
+    .title {
+        font-size: 1em;
+        font-weight: bolder;
+        color: white;
+    }
+    .toggleSwitch {
+        padding-left: 50px;
+    }
+}
