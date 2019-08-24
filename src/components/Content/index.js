@@ -1,19 +1,18 @@
 import React from 'react'
+import styles from './content.module.scss'
+import CardAbout from '../CardAbout'
+import CardContact from '../CardContact'
 
 const Content = () => {
     return (
-         <div>
-            <p>TOP GALLERY with PHONE NUMBER IN MIDDLE</p>
-            <p> CONTACT INFORMATION</p>
-            <p> THEN WE WILL HAVE SUMMARY PARAGRAPH</p>
-            <p> CARDS That will describe some things</p>   
-
-
-
-
-
-
-
+         <div className={styles.contentContainer}>
+            <div className={styles.topGallery}>
+                <p>CALL TODAY @ 970.531.9665</p>  
+            </div>
+            <div className={styles.cardContainer}>
+                <CardAbout />
+                <CardContact />
+            </div>
          </div>
     )
 }

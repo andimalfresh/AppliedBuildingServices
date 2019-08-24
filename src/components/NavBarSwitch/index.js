@@ -8,7 +8,8 @@ export default function Switches() {
   });
 
   const handleChange = name => event => {
-    setState({ ...state, [name]: event.target.checked });
+    setState({ ...state, [name]: event.target.checked })
+    console.log("Slider Button Clicked")
   };
 
   return (
@@ -18,6 +19,7 @@ export default function Switches() {
         value="checkedF"
         color="default"
         inputProps={{ 'aria-label': 'checkbox with default color' }}
+        onClick = {handleChange()}
       />
     </div>
   );
