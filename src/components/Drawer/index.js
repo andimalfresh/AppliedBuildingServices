@@ -42,8 +42,9 @@ export default function SwipeableTemporaryDrawer() {
       onClick={toggleDrawer(side, false)}
       onKeyDown={toggleDrawer(side, false)}
     >
+    <Divider />
       <List>
-        {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
+        {['CALL', 'EMAIL', 'INSTAGRAM', 'FACEBOOK'].map((text, index) => (
           <ListItem button key={text}>
             <ListItemIcon>{index % 2 === 0 ? <div>No</div> : <div>Yes</div>} </ListItemIcon>
             <ListItemText primary={text} />
@@ -51,41 +52,6 @@ export default function SwipeableTemporaryDrawer() {
         ))}
       </List>
       <Divider />
-      <List>
-        {['All mail', 'Trash', 'Spam'].map((text, index) => (
-          <ListItem button key={text}>
-            <ListItemIcon>{index % 2 === 0 ? <div>No</div> : <div>Yes</div>} </ListItemIcon>
-            <ListItemText primary={text} />
-          </ListItem>
-        ))}
-      </List>
-    </div>
-  )
-
-  const fullList = side => (
-    <div
-      className={classes.fullList}
-      role="presentation"
-      onClick={toggleDrawer(side, false)}
-      onKeyDown={toggleDrawer(side, false)}
-    >
-      <List>
-        {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
-          <ListItem button key={text}>
-            <ListItemIcon>{index % 2 === 0 ? <div>No</div> : <div>Yes</div>} </ListItemIcon>
-            <ListItemText primary={text} />
-          </ListItem>
-        ))}
-      </List>
-      <Divider />
-      <List>
-        {['All mail', 'Trash', 'Spam'].map((text, index) => (
-          <ListItem button key={text}>
-            <ListItemIcon>{index % 2 === 0 ? <div>No</div> : <div>Yes</div>} </ListItemIcon>
-            <ListItemText primary={text} />
-          </ListItem>
-        ))}
-      </List>
     </div>
   )
 
@@ -105,23 +71,6 @@ export default function SwipeableTemporaryDrawer() {
         onClose={toggleDrawer('top', false)}
         onOpen={toggleDrawer('top', true)}
       >
-        {fullList('top')}
-      </SwipeableDrawer>
-      <SwipeableDrawer
-        anchor="bottom"
-        open={state.bottom}
-        onClose={toggleDrawer('bottom', false)}
-        onOpen={toggleDrawer('bottom', true)}
-      >
-        {fullList('bottom')}
-      </SwipeableDrawer>
-      <SwipeableDrawer
-        anchor="right"
-        open={state.right}
-        onClose={toggleDrawer('right', false)}
-        onOpen={toggleDrawer('right', true)}
-      >
-        {sideList('right')}
       </SwipeableDrawer>
     </div>
   )

@@ -6,6 +6,9 @@
     display: flex;
     flex-direction: column;
 }
+h3 {
+    margin: 0
+}
 ul {
     list-style-type: none;
     margin-block-start: 0em;
@@ -40,7 +43,10 @@ ul {
     font-size: 2em
 }
 .appContactCard {
-    background-color: orangered
+    background-color: orangered;
+}
+.contactList li {
+    display: inline-block
 }
 .appAboutCard {
     background-color: pink
