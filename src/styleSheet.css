@@ -6,6 +6,11 @@
     display: flex;
     flex-direction: column;
 }
+.appDrawer {
+    background-color: black;
+    color: white;
+    font-weight: bolder;
+}
 h3 {
     margin: 0
 }

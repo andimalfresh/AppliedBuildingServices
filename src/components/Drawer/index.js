@@ -5,9 +5,12 @@ import Button from '@material-ui/core/Button'
 import List from '@material-ui/core/List'
 import Divider from '@material-ui/core/Divider'
 import ListItem from '@material-ui/core/ListItem'
-import ListItemIcon from '@material-ui/core/ListItemIcon'
-import ListItemText from '@material-ui/core/ListItemText'
 import MenuIcon from '@material-ui/icons/Menu'
+import Icon from '@mdi/react'
+import { mdiEmail } from '@mdi/js'
+import { mdiGoogle } from '@mdi/js'
+import { mdiInstagram } from '@mdi/js'
+import { mdiPhone } from '@mdi/js'
 
 const useStyles = makeStyles({
   list: {
@@ -42,16 +45,59 @@ export default function SwipeableTemporaryDrawer() {
       onClick={toggleDrawer(side, false)}
       onKeyDown={toggleDrawer(side, false)}
     >
-    <Divider />
-      <List>
-        {['CALL', 'EMAIL', 'INSTAGRAM', 'FACEBOOK'].map((text, index) => (
-          <ListItem button key={text}>
-            <ListItemIcon>{index % 2 === 0 ? <div>No</div> : <div>Yes</div>} </ListItemIcon>
-            <ListItemText primary={text} />
-          </ListItem>
-        ))}
-      </List>
       <Divider />
+      <List>
+          <ListItem className="drawerListItem">
+            <Icon path={mdiPhone}
+              title="Call Us !"
+              size={2}
+              color="black"
+            />
+              <a rel="noopener noreferrer" target="_blank" href="tel:+19705319665">
+                CALL
+              </a>
+          </ListItem>
+          <ListItem className="drawerListItem">
+              <Icon path={mdiEmail}
+              title="Call Us !"
+              size={2}
+              color="black"
+              />  
+            <a href="mailto:wandrewpedersen@gmail.com?Subject=Development%20question..." rel="noopener noreferrer" target="_blank">
+              EMAIL
+            </a>
+          </ListItem>
+          <ListItem className="drawerListItem">
+          <Icon path={mdiGoogle}
+              title="Call Us !"
+              size={2}
+              color="black"
+              />
+            <a rel="noopener noreferrer" target="_blank" href="https://instagram.com/andimalfresh/">
+              FACEBOOK
+            </a>
+          </ListItem>
+          <ListItem className="drawerListItem">
+              <Icon path={mdiInstagram}
+              title="Call Us !"
+              size={2}
+              color="black"
+              />
+            <a rel="noopener noreferrer" target="_blank" href="https://instagram.com/andimalfresh/">
+              INSTAGRAM
+            </a>
+          </ListItem>
+          <ListItem className="drawerListItem">
+          <Icon path={mdiGoogle}
+              title="Call Us !"
+              size={2}
+              color="black"
+              />
+            <a rel="noopener noreferrer" target="_blank" href="https://instagram.com/andimalfresh/">
+              GOOGLE
+            </a>
+          </ListItem>
+      </List>
     </div>
   )
 
