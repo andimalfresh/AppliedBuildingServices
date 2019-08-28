@@ -18,12 +18,8 @@ const styles = {
     padding: '0 30px',
     boxShadow: '0 3px 5px 2px rgba(255, 105, 135, .3)',
   },
-  overrides: {
-    MuiButton: {
-      raisedPrimary: {
-        color: 'white',
-      },
-    },
+  menuButton: {
+    color: 'white'
   }
 };
 
@@ -40,7 +36,7 @@ const styles = {
             <Drawer />
           </IconButton>
           <Typography className="Test">
-            applied building services
+            Applied Building Services
           </Typography>
         </Toolbar>
         
