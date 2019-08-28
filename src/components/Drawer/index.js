@@ -5,9 +5,12 @@ import Button from '@material-ui/core/Button'
 import List from '@material-ui/core/List'
 import Divider from '@material-ui/core/Divider'
 import ListItem from '@material-ui/core/ListItem'
-import ListItemIcon from '@material-ui/core/ListItemIcon'
-import ListItemText from '@material-ui/core/ListItemText'
 import MenuIcon from '@material-ui/icons/Menu'
+import Icon from '@mdi/react'
+import { mdiEmail } from '@mdi/js'
+import { mdiGoogle } from '@mdi/js'
+import { mdiInstagram } from '@mdi/js'
+import { mdiPhone } from '@mdi/js'
 
 const useStyles = makeStyles({
   list: {
@@ -21,10 +24,7 @@ const useStyles = makeStyles({
 export default function SwipeableTemporaryDrawer() {
   const classes = useStyles()
   const [state, setState] = React.useState({
-    top: false,
     left: false,
-    bottom: false,
-    right: false,
   })
 
   const toggleDrawer = (side, open) => event => {
@@ -42,56 +42,65 @@ export default function SwipeableTemporaryDrawer() {
       onClick={toggleDrawer(side, false)}
       onKeyDown={toggleDrawer(side, false)}
     >
-      <List>
-        {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
-          <ListItem button key={text}>
-            <ListItemIcon>{index % 2 === 0 ? <div>No</div> : <div>Yes</div>} </ListItemIcon>
-            <ListItemText primary={text} />
-          </ListItem>
-        ))}
-      </List>
       <Divider />
       <List>
-        {['All mail', 'Trash', 'Spam'].map((text, index) => (
-          <ListItem button key={text}>
-            <ListItemIcon>{index % 2 === 0 ? <div>No</div> : <div>Yes</div>} </ListItemIcon>
-            <ListItemText primary={text} />
+          <ListItem className="drawerListItem">
+            <Icon path={mdiPhone}
+              title="Call Us !"
+              size={2}
+              color="black"
+            />
+              <a rel="noopener noreferrer" target="_blank" href="tel:+19705319665">
+                CALL
+              </a>
           </ListItem>
-        ))}
-      </List>
-    </div>
-  )
-
-  const fullList = side => (
-    <div
-      className={classes.fullList}
-      role="presentation"
-      onClick={toggleDrawer(side, false)}
-      onKeyDown={toggleDrawer(side, false)}
-    >
-      <List>
-        {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
-          <ListItem button key={text}>
-            <ListItemIcon>{index % 2 === 0 ? <div>No</div> : <div>Yes</div>} </ListItemIcon>
-            <ListItemText primary={text} />
+          <ListItem className="drawerListItem">
+              <Icon path={mdiEmail}
+              title="Call Us !"
+              size={2}
+              color="black"
+              />  
+            <a href="mailto:wandrewpedersen@gmail.com?Subject=Development%20question..." rel="noopener noreferrer" target="_blank">
+              EMAIL
+            </a>
           </ListItem>
-        ))}
-      </List>
-      <Divider />
-      <List>
-        {['All mail', 'Trash', 'Spam'].map((text, index) => (
-          <ListItem button key={text}>
-            <ListItemIcon>{index % 2 === 0 ? <div>No</div> : <div>Yes</div>} </ListItemIcon>
-            <ListItemText primary={text} />
+          <ListItem className="drawerListItem">
+          <Icon path={mdiGoogle}
+              title="Call Us !"
+              size={2}
+              color="black"
+              />
+            <a rel="noopener noreferrer"  target="_blank" href="https://instagram.com/andimalfresh/">
+              FACEBOOK
+            </a>
           </ListItem>
-        ))}
+          <ListItem className="drawerListItem">
+              <Icon path={mdiInstagram}
+              title="Call Us !"
+              size={2}
+              color="black"
+              />
+            <a rel="noopener noreferrer" target="_blank" href="https://instagram.com/andimalfresh/">
+              INSTAGRAM
+            </a>
+          </ListItem>
+          <ListItem className="drawerListItem">
+          <Icon path={mdiGoogle}
+              title="Call Us !"
+              size={2}
+              color="black"
+              />
+            <a rel="noopener noreferrer" target="_blank" href="https://instagram.com/andimalfresh/">
+              GOOGLE
+            </a>
+          </ListItem>
       </List>
     </div>
   )
 
   return (
     <div>
-      <Button onClick={toggleDrawer('left', true)}><MenuIcon /></Button>
+      <Button onClick={toggleDrawer('left', true)}><MenuIcon className={classes.menuButton} color="secondary"/></Button>
       <SwipeableDrawer
         open={state.left}
         onClose={toggleDrawer('left', false)}
@@ -105,23 +114,6 @@ export default function SwipeableTemporaryDrawer() {
         onClose={toggleDrawer('top', false)}
         onOpen={toggleDrawer('top', true)}
       >
-        {fullList('top')}
-      </SwipeableDrawer>
-      <SwipeableDrawer
-        anchor="bottom"
-        open={state.bottom}
-        onClose={toggleDrawer('bottom', false)}
-        onOpen={toggleDrawer('bottom', true)}
-      >
-        {fullList('bottom')}
-      </SwipeableDrawer>
-      <SwipeableDrawer
-        anchor="right"
-        open={state.right}
-        onClose={toggleDrawer('right', false)}
-        onOpen={toggleDrawer('right', true)}
-      >
-        {sideList('right')}
       </SwipeableDrawer>
     </div>
   )

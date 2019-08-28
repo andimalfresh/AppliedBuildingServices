@@ -1,14 +1,19 @@
 import React from 'react'
-import styles from './cardabout.module.scss'
 
 const CardAbout = () =>{
     return (
-        <div className={styles.CardAbout}>
-            <h2>This is the CardAbout Component</h2>
-            <div className={styles.CardAboutText}>
-                <div className= {styles.CardAboutImage}></div>
-                <p>Lorem Ninja Ipsum
-                Lorem ninja ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut ninja wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit ninja lobortis nisl ut aliquip ex ea commodo consequat. Duis ninja autem vel eum iriure dolor in hendrerit in vulputate ninja velit esse molestie consequat, vel illum dolore eu feugiat nulla ninja facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praese</p>
+        <div className="appAboutCard">
+        Serving the Grand County Area in:
+            <div className="jobRoles">    
+                <h3>HOME REPAIRS</h3>
+                <h3>REMODELS</h3>
+                <h3>BUILDING MAINTENANCE</h3>
+            </div>
+            <div className="textAboutCard">
+                <p>We are Applied Building Services, specializing in home improvements, property maintenance, and building repairs in Grand County Colorado.</p>
+                <p>Having over 20 years experience in the field we have the professional skills and know-how to bring you the highest quality results in a timely fashion.</p>
+                <p>Weather it's installing a new flooring, extending your porch for more room, or remodeling to give you that kitchen you've always wanted, we'd love to help.</p>
+                <p>Contact us from any of our resources listed below!</p>
             </div>
         </div>
     )

@@ -1,0 +1,109 @@
+html,
+body {
+ height: 100%;
+ position: relative;
+}
+.App {
+    min-height: 90vh; /* will cover the 100% of viewport */
+    overflow: hidden;
+    display: block;
+    position: relative;
+    padding-bottom: 100px; /* height of your footer */
+    text-align: center;
+    background-color: whitesmoke;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+}
+.MuiButton-root {
+    color:white;
+}
+.appDrawer {
+    background-color: black;
+    color: red;
+    font-weight: bolder;
+}
+a:link {
+    text-decoration: none;
+    color: black;
+}
+h3 {
+    margin: 0
+}
+.jobRoles h3 {
+    margin-top: 10px;
+    margin-bottom: 10px
+}
+ul {
+    list-style-type: none;
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 0px;
+}
+.appContent {
+    margin: 10% 10%;
+    height: 90%;
+    background-color: red
+}
+.topGallery {
+    background: url('kitchen.jpg');
+    width: auto;
+    height: 40vh;
+    overflow: hidden;
+    resize: both;
+    background-size:100% 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white
+}
+.topGallery a:link {
+    color: white
+}
+.topGallery p {
+    border: 5px;
+    border-color: red;
+    background-color: black;
+    padding: 15px;
+    font-weight: bolder;
+    font-size: 2em
+}
+.appContactCard {
+    padding: 10px;
+    color: white;
+    background-color: black;
+}
+.contactList li {
+    display: inline-block
+}
+.appAboutCard {
+    background-color: White;
+    padding: 25px
+}
+.appAboutText {
+    color: blue;
+}
+.appFooter {
+    background-color: black;
+    color:white;
+    font-weight: bold;
+    position: absolute;
+    bottom: 0;
+    width: 100%
+}
+.drawerListItem a:Link {
+    color: Black;
+}
+@media only screen and (max-width: 1430px) and (min-width: 768px) {
+    /* tablet and small desktop res 7 */
+  }
+  
+  
+  @media only screen and (min-width: 1430px) {
+    /* Large Desktop view width */
+  }
+  @media only screen and (max-width: 400px) {
+ /* small screen Res */
+  }

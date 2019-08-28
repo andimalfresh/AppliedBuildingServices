@@ -2,16 +2,17 @@ import React from 'react'
 import Navbar from './components/Navbar'
 import Content from './components/Content'
 import Footer from './components/Footer'
-import styles from './App.module.scss'
+import './styleSheet.css'
+
 
 function App() {
   return (
-    <div className={styles.App} >
+    <div className="App" >
         <Navbar />
-        <Content className={styles.Content} />
-        <Footer className={styles.Footer} />
+        <Content />
+        <Footer />
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
