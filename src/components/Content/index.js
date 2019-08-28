@@ -6,7 +6,11 @@ const Content = () => {
     return (
          <div className="appContent">
             <div className="topGallery">
-                <p>CALL TODAY @970.531.9665</p>  
+                <a rel="noopener noreferrer" target="_blank" href="te +19705317626">
+                    <p>
+                        CALL TODAY 970.531.7626
+                    </p>
+                </a> 
             </div>
             <div className="cardContainer">
                 <CardAbout />

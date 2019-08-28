@@ -24,10 +24,7 @@ const useStyles = makeStyles({
 export default function SwipeableTemporaryDrawer() {
   const classes = useStyles()
   const [state, setState] = React.useState({
-    top: false,
     left: false,
-    bottom: false,
-    right: false,
   })
 
   const toggleDrawer = (side, open) => event => {
@@ -73,7 +70,7 @@ export default function SwipeableTemporaryDrawer() {
               size={2}
               color="black"
               />
-            <a rel="noopener noreferrer" target="_blank" href="https://instagram.com/andimalfresh/">
+            <a rel="noopener noreferrer"  target="_blank" href="https://instagram.com/andimalfresh/">
               FACEBOOK
             </a>
           </ListItem>
@@ -103,7 +100,7 @@ export default function SwipeableTemporaryDrawer() {
 
   return (
     <div>
-      <Button onClick={toggleDrawer('left', true)}><MenuIcon /></Button>
+      <Button onClick={toggleDrawer('left', true)}><MenuIcon className={classes.menuButton} color="secondary"/></Button>
       <SwipeableDrawer
         open={state.left}
         onClose={toggleDrawer('left', false)}
