@@ -11,6 +11,7 @@ import { mdiEmail } from '@mdi/js'
 import { mdiGoogle } from '@mdi/js'
 import { mdiInstagram } from '@mdi/js'
 import { mdiPhone } from '@mdi/js'
+import { mdiFacebook } from '@mdi/js'
 
 const useStyles = makeStyles({
   list: {
@@ -46,51 +47,51 @@ export default function SwipeableTemporaryDrawer() {
       <List>
           <ListItem className="drawerListItem">
             <Icon path={mdiPhone}
-              title="Call Us !"
+              title="Call us Today"
               size={2}
               color="black"
             />
-              <a rel="noopener noreferrer" target="_blank" href="tel:+19705319665">
+              <a alt="Call us" rel="noopener noreferrer" target="_blank" href="tel:+19705319665">
                 CALL
               </a>
           </ListItem>
           <ListItem className="drawerListItem">
               <Icon path={mdiEmail}
-              title="Call Us !"
+              title="Send us an Email"
               size={2}
               color="black"
               />  
-            <a href="mailto:wandrewpedersen@gmail.com?Subject=Development%20question..." rel="noopener noreferrer" target="_blank">
+            <a alt="Send Us an email" href="mailto:wandrewpedersen@gmail.com?Subject=Development%20question..." rel="noopener noreferrer" target="_blank">
               EMAIL
             </a>
           </ListItem>
           <ListItem className="drawerListItem">
-          <Icon path={mdiGoogle}
-              title="Call Us !"
+          <Icon path={mdiFacebook}
+              title="Add us on Facebook"
               size={2}
               color="black"
               />
-            <a rel="noopener noreferrer"  target="_blank" href="https://instagram.com/andimalfresh/">
+            <a alt="Add Us on Facebook" rel="noopener noreferrer"  target="_blank" href="https://instagram.com/andimalfresh/">
               FACEBOOK
             </a>
           </ListItem>
           <ListItem className="drawerListItem">
               <Icon path={mdiInstagram}
-              title="Call Us !"
+              title="Add us on Instagram"
               size={2}
               color="black"
               />
-            <a rel="noopener noreferrer" target="_blank" href="https://instagram.com/andimalfresh/">
+            <a alt="Add us on Instagram" rel="noopener noreferrer" target="_blank" href="https://instagram.com/andimalfresh/">
               INSTAGRAM
             </a>
           </ListItem>
           <ListItem className="drawerListItem">
           <Icon path={mdiGoogle}
-              title="Call Us !"
+              title="Check us out on Google"
               size={2}
               color="black"
               />
-            <a rel="noopener noreferrer" target="_blank" href="https://instagram.com/andimalfresh/">
+            <a alt="Check us out on Google" rel="noopener noreferrer" target="_blank" href="https://instagram.com/andimalfresh/">
               GOOGLE
             </a>
           </ListItem>
