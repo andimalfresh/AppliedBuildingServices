@@ -7,9 +7,7 @@ const Content = () => {
          <div className="appContent">
             <div className="topGallery">
                 <a rel="noopener noreferrer" target="_blank" href="te +19705317626">
-                    <p>
-                        CALL TODAY 970.531.7626
-                    </p>
+                    <img src={require('../../ABSlogo.jpg')} alt="Business Logo" />
                 </a> 
             </div>
             <div className="cardContainer">

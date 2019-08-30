@@ -10,7 +10,7 @@ import { withStyles } from '@material-ui/core/styles';
 
 const styles = {
   root: {
-    background: 'linear-gradient(45deg, #000 30%, #F00 90%)',
+    background: '#000',
     borderRadius: 3,
     border: 0,
     color: 'white',
@@ -36,7 +36,7 @@ const styles = {
             <Drawer />
           </IconButton>
           <Typography className="Test">
-            Applied Building Services
+            CALL TODAY 970.531.7276
           </Typography>
         </Toolbar>
         
